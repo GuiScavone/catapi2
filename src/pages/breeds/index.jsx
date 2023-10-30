@@ -1,12 +1,11 @@
 import React from 'react'
 
-function index() {
+const Breeds = () => {
   return (
     <div>
-    Hello cats
+      Breeds
     </div>
   )
 }
 
-export default index
-
+export default Breeds;
