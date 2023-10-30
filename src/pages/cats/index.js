@@ -1,11 +1,12 @@
 import React from 'react'
 
-function App() {
+function Cats() {
   return (
     <div>
-      hello 
+      Cats
     </div>
   )
 }
 
-export default App
+export default Cats;
+
