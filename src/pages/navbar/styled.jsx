@@ -15,3 +15,4 @@ export const NavItem = styled.a`
   margin: 0 10px;
   cursor: pointer;
 `;
+
