@@ -19,3 +19,8 @@ export const NavItem = styled.a`
   cursor: pointer;
 `;
 
+export const Image = styled.img`
+  color: #BC6C25;
+  text-align: left;
+  
+`;
