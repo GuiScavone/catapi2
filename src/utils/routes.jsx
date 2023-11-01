@@ -7,14 +7,14 @@ import Favorites from "../pages/favorites";
 
 const AllRoutes = () => {
   return (
-
+<>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/cats" element={<Cats />} />
         <Route path="/breeds" element={<Breeds />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
-  
+      </>
   );
 };
 
