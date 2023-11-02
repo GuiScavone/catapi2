@@ -48,6 +48,58 @@ export const H2Styled = styled.h2`
    top: 650px;
  `;
 
+export const H3Styled = styled.h3`
+color: #fefae0;
+font-family: Amaranth;
+font-size: 32px;
+font-style: normal;
+font-weight: 60;
+line-height: 144px;
+letter-spacing: -1.056px;
+position: absolute;
+left: 240px;
+top: 815px;
+`;
+
+export const H4Styled = styled.h4`
+color: #fefae0;
+font-family: Amaranth;
+font-size: 32px;
+font-style: normal;
+font-weight: 60;
+line-height: 144px;
+letter-spacing: -1.056px;
+position: absolute;
+left: 625px;
+top: 815px;
+`;
+
+export const H5Styled = styled.h5`
+color: #fefae0;
+font-family: Amaranth;
+font-size: 32px;
+font-style: normal;
+font-weight: 60;
+line-height: 144px;
+letter-spacing: -1.056px;
+position: absolute;
+left: 975px;
+top: 815px;
+`;
+
+export const H6Styled = styled.h6`
+   color: #bc6c25;
+   font-family: Amaranth;
+   font-size: 96px;
+   font-style: normal;
+   font-weight: 60;
+   line-height: 144px;
+   letter-spacing: -1.056px;
+   position: absolute;
+   left: 441px;
+   top: 1150px;
+ `;
+
 export const BodyPage = styled.div``;
 
 export const Swiper = styled.div`
