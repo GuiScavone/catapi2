@@ -1,10 +1,12 @@
 import React from "react";
-import { Navbar, NavItem } from "./styled";
+import { Navbar, NavItem, LogoItem } from "./styled";
 import { Link } from "react-router-dom";
+
 
 const NavBar = () => {
   return (
     <Navbar>
+   
       <Link to="/home">
         <NavItem>Home</NavItem>
       </Link>

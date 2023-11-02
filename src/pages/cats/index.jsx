@@ -1,9 +1,11 @@
 import React from 'react'
+import CatGallery from '../../components/CatsGallery';
 
 const Cats = () => {
   return (
     <div>
-      cats
+      Cats
+      <CatGallery />
     </div>
   );
 };
