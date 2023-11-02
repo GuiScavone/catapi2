@@ -69,9 +69,8 @@ export const LikeButton = styled.button`
     height: 100%;
 `;
 
-export const HeartIcon = styled.span`
-    color: red;
-    font-size: 1.5rem;
+export const HeartIcon = styled.img`
+    margin-top: 5px;
 `;
 
 export const BottomImage = styled.img`

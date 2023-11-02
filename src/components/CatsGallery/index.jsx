@@ -1,12 +1,28 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Gallery, LeftMenu, RightMenu, Cat, Image, TitleContainer, LikeButton, HeartIcon, LikeButtonContainer, BottomImage, List, Listli } from "./style";
+import { 
+    Gallery, 
+    LeftMenu, 
+    RightMenu, 
+    Cat, 
+    Image, 
+    LikeButton, 
+    HeartIcon, 
+    LikeButtonContainer, 
+    BottomImage, 
+    List, 
+    Listli 
+} from "./style";
 import catHaven from "../../assets/catHaven.svg"
 import { LogoLeftMenu } from "../Logo";
 import gatoFofo from "../../assets/gatoFofo.svg"
+import heartFill from "../../assets/heartFill.svg"
+import { endpoint } from "../../utils/urls";
+import { Favorites } from "../Favorites";
 
 export default function CatGallery() {
     const [catImage, setCatImage] = useState([]);
+    const [favourites, setFavourites] = useState([]);
 
     const fetchCatImage = async () => {
             try {
@@ -19,9 +35,34 @@ export default function CatGallery() {
         };
 
     useEffect(() => {
-        
-    fetchCatImage();
+        fetchCatImage();
     }, []);
+
+    const addingToFavourites = async (cat) => {
+        const access = JSON.stringify({
+            image_id: cat.id,
+            sub_id: "my-user-1234",
+        });
+        try{
+            const response = await fetch (endpoint.favourites, {
+                method: 'POST',
+                headers: {
+                    'x-api-key': 'live_SeVpXc9Uvalz7nUMObik26FYEt8EKO6S6pq1LskUroJZGCcGIrdQYeBDDDCo0FpT',
+                    'Content-Type': 'application/json',
+                },
+                body: access,
+            });
+
+            if (response.ok) {
+                console.log("Cat added with success", response.data);
+                setFavourites([...favourites, cat]);
+            } else {
+                console.log("Error adding the favourite cat", response.statusText);
+            }
+        } catch(error){
+            console.log("Error to POST to add a new favorite cat", error);
+        }
+    }
 
     return (
         <>
@@ -41,14 +82,15 @@ export default function CatGallery() {
                 <Cat>
                     <Image key={index} src={cat.url} alt={`Cat ${index + 1}`} />
                     <LikeButtonContainer>
-                        <LikeButton>
-                            <HeartIcon>❤️</HeartIcon>
+                        <LikeButton onClick={() => addingToFavourites(cat)}>
+                            <HeartIcon src={heartFill} alt="Heart icon"/>
                         </LikeButton>
                     </LikeButtonContainer>
                 </Cat>
             )}
             </RightMenu>
           </Gallery>
+          <Favorites favourites={favourites} />
         </>
     )
 }
