@@ -1,11 +1,16 @@
 import React from 'react'
+import { BodyHome } from '../home/styled';
+import Favorites from '../../components/Favorites';
 
-const Favorites = () => {
+const favorites = () => {
   return (
-    <div>
-      favorites
-    </div>
+    <>
+      <BodyHome>
+        <Favorites />
+      </BodyHome>
+    </>
+      
   );
 };
 
-export default Favorites;
+export default favorites;

@@ -18,7 +18,7 @@ import { LogoLeftMenu } from "../Logo";
 import gatoFofo from "../../assets/gatoFofo.svg"
 import heartFill from "../../assets/heartFill.svg"
 import { endpoint } from "../../utils/urls";
-import { Favorites } from "../Favorites";
+import Favorites from "../Favorites";
 
 export default function CatGallery() {
     const [catImage, setCatImage] = useState([]);
@@ -39,30 +39,35 @@ export default function CatGallery() {
     }, []);
 
     const addingToFavourites = async (cat) => {
-        const access = JSON.stringify({
-            image_id: cat.id,
-            sub_id: "my-user-1234",
-        });
-        try{
-            const response = await fetch (endpoint.favourites, {
-                method: 'POST',
-                headers: {
-                    'x-api-key': 'live_SeVpXc9Uvalz7nUMObik26FYEt8EKO6S6pq1LskUroJZGCcGIrdQYeBDDDCo0FpT',
-                    'Content-Type': 'application/json',
-                },
-                body: access,
+        if(!favourites.some((favouriteCat) => favouriteCat.id === cat.id)) {
+            const access = JSON.stringify({
+                image_id: cat.id,
+                sub_id: "my-user-1234",
             });
-
-            if (response.ok) {
-                console.log("Cat added with success", response.data);
-                setFavourites([...favourites, cat]);
-            } else {
-                console.log("Error adding the favourite cat", response.statusText);
+            try{
+                const response = await fetch (endpoint.favourites, {
+                    method: 'POST',
+                    headers: {
+                        'x-api-key': 'live_SeVpXc9Uvalz7nUMObik26FYEt8EKO6S6pq1LskUroJZGCcGIrdQYeBDDDCo0FpT',
+                        'Content-Type': 'application/json',
+                    },
+                    body: access,
+                });
+    
+                if (response.ok) {
+                    console.log("Cat added with success", response.data);
+                    setFavourites([...favourites, cat]);
+                    console.log(favourites);
+                } else {
+                    console.log("Error adding the favourite cat", response.statusText);
+                }
+            } catch(error){
+                console.log("Error to POST to add a new favorite cat", error);
             }
-        } catch(error){
-            console.log("Error to POST to add a new favorite cat", error);
+        } else {
+            console.log("Cat is already in favourites.");
         }
-    }
+    };
 
     return (
         <>
@@ -90,7 +95,7 @@ export default function CatGallery() {
             )}
             </RightMenu>
           </Gallery>
-          <Favorites favourites={favourites} />
+          {/* {<Favorites favourites={favourites}></Favorites>} */}
         </>
     )
 }
