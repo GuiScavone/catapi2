@@ -7,7 +7,7 @@ export const Navbar = styled.nav`
   justify-content: center;
   align-items: center;
   color: #fff;
-  width: 1440px;
+  width: 100%;
   height: 50px;
   flex-shrink: 0;
 `;

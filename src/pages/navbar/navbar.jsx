@@ -1,13 +1,15 @@
 import React from "react";
 import { Navbar, NavItem, LogoItem } from "./styled";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
+import { Logo } from "../../components/Logo";
 
 
 const NavBar = () => {
   return (
     <Navbar>
-   
+      <Logo src={logo} />
+      <div>
       <Link to="/home">
         <NavItem>Home</NavItem>
       </Link>
@@ -20,6 +22,7 @@ const NavBar = () => {
       <Link to="/favorites">
         <NavItem>Favorites</NavItem>
       </Link>
+      </div>
     </Navbar>
   );
 };
