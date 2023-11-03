@@ -3,7 +3,8 @@ import imagem from "../../assets/background.png";
 
 export const BodyHome = styled.body`
   background-image: url(${imagem});
-  width: 1998px;
-  height: 1261px;
+  width: 100vw;
+  height: 100vw;
   flex-shrink: 0;
+  background-attachment: fixed;
 `;
