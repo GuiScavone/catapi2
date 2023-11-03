@@ -11,6 +11,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
      <AllRoutes />
+   
     </BrowserRouter>
     </BodyApp>
   );
