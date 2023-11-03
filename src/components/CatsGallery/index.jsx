@@ -27,7 +27,7 @@ export default function CatGallery() {
     const fetchCatImage = async () => {
             try {
                 const response = await axios.get("https://api.thecatapi.com/v1/images/search?limit=10");
-                const limitedCatImages = response.data.slice(0, 8);
+                const limitedCatImages = response.data.slice(0, 6);
                 setCatImage(limitedCatImages);
             } catch (error) {
                 console.error('Error fetching Cat images:', error);

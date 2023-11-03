@@ -13,7 +13,7 @@ export const Gallery = styled.section`
 `;
 
 export const LeftMenu = styled.div`
-    width: 20%;
+    width: 30%;
     height: 100%;
     border-radius: 30px;
     border: 1px solid #000;
@@ -24,7 +24,7 @@ export const LeftMenu = styled.div`
 `;
 
 export const RightMenu = styled.div`
-    width: 70%;
+    width: 80%;
     height: 100%;
     border-radius: 30px;
     background: #606C38; 
