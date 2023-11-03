@@ -1,10 +1,12 @@
 import React from 'react'
+import CatGallery from '../../components/CatsGallery';
+import { BodyHome } from '../home/styled';
 
 const Cats = () => {
   return (
-    <div>
-      cats
-    </div>
+    <BodyHome>    
+        <CatGallery />  
+    </BodyHome>
   );
 };
 

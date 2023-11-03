@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
 export const BodyApp = styled.body`
-  width: 1440px;
-  height: 1641px;
+  width: 100vw;
+  height: 100vw;
 `;

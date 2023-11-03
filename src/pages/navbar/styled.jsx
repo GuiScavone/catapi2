@@ -7,9 +7,9 @@ export const Navbar = styled.nav`
   justify-content: center;
   align-items: center;
   color: #fff;
-width: 1440px;
-height: 50px;
-flex-shrink: 0;
+  width: 100%;
+  height: 50px;
+  flex-shrink: 0;
 `;
 
 export const NavItem = styled.a`
@@ -19,3 +19,8 @@ export const NavItem = styled.a`
   cursor: pointer;
 `;
 
+export const Image = styled.img`
+  color: #BC6C25;
+  text-align: left;
+  
+`;
