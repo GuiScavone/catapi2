@@ -8,6 +8,8 @@ import axios from "axios";
 
 export default function Favorites() {
     const [favourites, setFavourites] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const catsPerPage = 8;
 
     useEffect(() => {
         const fetchFavorites = async () => {
@@ -32,6 +34,12 @@ export default function Favorites() {
         fetchFavorites();
     }, []);
 
+    const getDisplayedCats = () => {
+        const startIndex = (currentPage - 1) * catsPerPage;
+        const endIndex = startIndex + catsPerPage;
+        return favourites.slice(startIndex, endIndex);
+    };
+
     return (
        <>
          <Gallery>
@@ -47,15 +55,19 @@ export default function Favorites() {
             </LeftMenu>
             <RightMenu>
                {Array.isArray(favourites) && favourites.length > 0 ? (
-                    favourites.map((cat, index) => (
+                    getDisplayedCats().map((cat, index) => (
                         <Cat key={index}>
-                            <Image src={cat.url} alt={`Cat ${index + 1}`} />
+                            <Image src={cat.image.url} alt={`Cat ${index + 1}`} />
                         </Cat>
                     ))
                 ) : (
                   <p>No favourite found.</p>
                 )} 
             </RightMenu>
+            <div>
+                <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>Back</button>
+                <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage * catsPerPage >= favourites.length}>Next</button>
+            </div>
          </Gallery>
        </>
     )
