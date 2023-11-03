@@ -7,15 +7,10 @@ import cat2 from "../../assets/gatopreto.png";
 
 export const BodyHome = styled.body`
   background-image: url(${imagem});
-   background-repeat: no-repeat;
-   left: -229px;
-   top:-49px;
-  width: 1440px;
-   height: 1641px;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
+  width: 100vw;
+  height: 100vw;
+  flex-shrink: 0;
+  background-attachment: fixed;
 `;
 
 export const H1Styled = styled.h1`
