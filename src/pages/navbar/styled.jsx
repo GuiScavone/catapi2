@@ -10,6 +10,7 @@ export const Navbar = styled.nav`
   width: 100%;
   height: 50px;
   flex-shrink: 0;
+  background-attachment: fixed;
 `;
 
 export const Link = styled.div `
