@@ -1,32 +1,15 @@
-import React, { useState } from "react";
-import {
-  StyledSearch,
-  StyledButton,
-  StyledContent,
-  StyledCards,
-} from "./style";
+import React from 'react'
+import { BodyHome } from '../home/styled'
+import CatBreeds from '../../components/Breeds';
 
 const Breeds = () => {
-  const [isDropDownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropDownOpen);
-  };
-
   return (
     <>
-      <StyledSearch>
-        <StyledButton onClick={toggleDropdown}>
-          Breeds &nbsp; {isDropDownOpen ? "▲" : "▼"}
-        </StyledButton>
-        {isDropDownOpen && 
-        <StyledContent>
-         <a>Breeds</a>
-        </StyledContent>}
-      </StyledSearch>
-      <StyledCards></StyledCards>
+    <BodyHome>
+      <CatBreeds />
+    </BodyHome>
     </>
-  );
-};
+  )
+}
 
 export default Breeds;

@@ -18,7 +18,6 @@ import { LogoLeftMenu } from "../Logo";
 import gatoFofo from "../../assets/gatoFofo.svg"
 import heartFill from "../../assets/heartFill.svg"
 import { endpoint } from "../../utils/urls";
-import Favorites from "../Favorites";
 
 export default function CatGallery() {
     const [catImage, setCatImage] = useState([]);
@@ -48,7 +47,7 @@ export default function CatGallery() {
                 const response = await fetch (endpoint.favourites, {
                     method: 'POST',
                     headers: {
-                        'x-api-key': 'live_SeVpXc9Uvalz7nUMObik26FYEt8EKO6S6pq1LskUroJZGCcGIrdQYeBDDDCo0FpT',
+                        'x-api-key': process.env.REACT_APP_API_KEY,
                         'Content-Type': 'application/json',
                     },
                     body: access,
