@@ -36,7 +36,7 @@ const Home = () => {
         <Line src={line} alt="Linha de marcação" />
         <H6Styled>Meet our cats</H6Styled>
       </BodyHome>
-      <Swiper
+      {/* <Swiper
         slidesPerView={3}
         spaceBetween={30}
         pagination={{
@@ -59,7 +59,7 @@ const Home = () => {
         <SwiperSlide>
           <SlideContainer></SlideContainer>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </BodyPage>
   );
 };

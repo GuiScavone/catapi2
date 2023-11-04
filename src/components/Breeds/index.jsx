@@ -17,7 +17,7 @@ export default function CatBreeds() {
                 const response = await axios.get(endpoint.breeds, {
                     headers: {
                         "Content-Type": "application/json",
-                        'x-api-key': process.env.REACT_APP_API_KEY,
+                        'x-api-key': 'live_SeVpXc9Uvalz7nUMObik26FYEt8EKO6S6pq1LskUroJZGCcGIrdQYeBDDDCo0FpT',
                     }
                   }
                 );

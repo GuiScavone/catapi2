@@ -47,7 +47,7 @@ export default function Favorites() {
         const deleteFavorite = {
             method: 'DELETE',
             headers: {
-                'x-api-key': process.env.REACT_APP_API_KEY,
+                'x-api-key': 'live_SeVpXc9Uvalz7nUMObik26FYEt8EKO6S6pq1LskUroJZGCcGIrdQYeBDDDCo0FpT',
             },
         };
         try {
