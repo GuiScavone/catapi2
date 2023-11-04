@@ -94,7 +94,6 @@ export default function CatGallery() {
             )}
             </RightMenu>
           </Gallery>
-          {/* {<Favorites favourites={favourites}></Favorites>} */}
         </>
     )
 }
