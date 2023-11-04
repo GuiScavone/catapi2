@@ -5,8 +5,9 @@ import catHaven from "../../assets/catHaven.svg";
 import gatoFofo from "../../assets/gatoFofo.svg";
 import { endpoint } from "../../utils/urls";
 import axios from "axios";
-import { DeleteButton, DeleteButtonContainer, TrashIcon } from "./style";
+import { DeleteButton, DeleteButtonContainer, TrashIcon, NextButton, BackButton, ButtonContainer, ImgError } from "./style";
 import trashIcon from "../../assets/trashIcon.png";
+import Error204 from "../../assets/204.jpg";
 
 export default function Favorites() {
     const [favourites, setFavourites] = useState([]);
@@ -90,13 +91,15 @@ export default function Favorites() {
                         </Cat>
                     ))
                 ) : (
-                  <p>No favourite found.</p>
+                  <ImgError src={Error204} alt="error 204" />
+                //   <p>No favourites found.</p>
                 )} 
+              <ButtonContainer>
+            <BackButton onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>Back</BackButton>
+            <NextButton onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage * catsPerPage >= favourites.length}>Next</NextButton>
+        </ButtonContainer>
             </RightMenu>
-            <div>
-                <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>Back</button>
-                <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage * catsPerPage >= favourites.length}>Next</button>
-            </div>
+         
          </Gallery>
        </>
     )
