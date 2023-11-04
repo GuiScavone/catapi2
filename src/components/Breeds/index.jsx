@@ -5,6 +5,7 @@ import catHaven from "../../assets/catHaven.svg";
 import gatoFofo from "../../assets/gatoFofo.svg";
 import axios from "axios";
 import { endpoint } from "../../utils/urls";
+import { BackButton, ButtonContainer, NextButton } from "../Favorites/style";
 
 export default function CatBreeds() {
     const [breeds, setBreeds] = useState([]);
@@ -67,11 +68,11 @@ export default function CatBreeds() {
                             )}
                         </ul>
                     </div>
+                <ButtonContainer>
+                    <BackButton onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>Back</BackButton>
+                    <NextButton onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage * breedsPerPage >= breeds.length}>Next</NextButton>
+                </ButtonContainer>
                 </RightMenu>
-                <div>
-                    <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>Back</button>
-                    <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage * breedsPerPage >= breeds.length}>Next</button>
-                </div>
             </Gallery>
         </>
     )
