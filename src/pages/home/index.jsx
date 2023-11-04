@@ -22,7 +22,11 @@ import "swiper/css/pagination";
 import image from "../../assets/GatoFofo.png";
 import line from "../../assets/line.png";
 
+
+
 const Home = () => {
+
+
   return (
     <BodyPage>
       <BodyHome>
@@ -34,9 +38,10 @@ const Home = () => {
         <H4Styled>Know Your Cat</H4Styled>
         <H5Styled>Take Your Pet Home</H5Styled>
         <Line src={line} alt="Linha de marcação" />
-        <H6Styled>Meet our cats</H6Styled>
+        {/* <H6Styled>Meet our cats</H6Styled> */}
+      
       </BodyHome>
-      <Swiper
+      {/* <Swiper 
         slidesPerView={3}
         spaceBetween={30}
         pagination={{
@@ -59,7 +64,7 @@ const Home = () => {
         <SwiperSlide>
           <SlideContainer></SlideContainer>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </BodyPage>
   );
 };

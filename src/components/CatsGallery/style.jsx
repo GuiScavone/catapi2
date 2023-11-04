@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Gallery = styled.section`
-    max-width: 70%;
+    /* max-width: 70%;
     min-width: 800px;
     display: flex;
     align-items: flex-start;
@@ -9,7 +9,14 @@ export const Gallery = styled.section`
     margin: auto;
     height: fit-content;
     flex-wrap: nowrap;
-    padding: 59px;
+    padding: 59px; */
+    width: 800px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+  padding: 59px;
 `;
 
 export const LeftMenu = styled.div`
@@ -46,10 +53,13 @@ export const Cat = styled.div`
 `;
 
 export const Image = styled.img`
-    max-width: 100%;
+    /* max-width: 100%;
     min-width: 50px;
     min-height: 50px;
-    min-width: 50px;
+    min-width: 50px; */
+    width: 160px;
+  height: 200px;
+  object-fit: cover;
 `;
 
 export const LikeButtonContainer = styled.div`
@@ -88,3 +98,4 @@ export const Listli = styled.li`
     font-size: 20px;
     font-weight: bold;
 `;
+

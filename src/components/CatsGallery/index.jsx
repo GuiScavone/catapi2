@@ -19,6 +19,7 @@ import gatoFofo from "../../assets/gatoFofo.svg"
 import heartFill from "../../assets/heartFill.svg"
 import { endpoint } from "../../utils/urls";
 import Favorites from "../Favorites";
+import Home from '../../pages/home';
 
 export default function CatGallery() {
     const [catImage, setCatImage] = useState([]);

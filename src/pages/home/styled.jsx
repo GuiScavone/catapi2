@@ -5,12 +5,17 @@ import line from "../../assets/line.png";
 import cat1 from "../../assets/GatoFofo.png";
 import cat2 from "../../assets/gatopreto.png";
 
-export const BodyHome = styled.body`
+export const BodyHome = styled.div`
   background-image: url(${imagem});
   width: 100vw;
   height: 100vw;
   flex-shrink: 0;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const H1Styled = styled.h1`
@@ -23,6 +28,8 @@ export const H1Styled = styled.h1`
   font-weight: 700;
   line-height: 150%;
   letter-spacing: -1.056px;
+  position: absolute;
+  top: 50px;
 
   &::first-of-type {
     font-weight: 700;
@@ -92,24 +99,24 @@ export const H6Styled = styled.h6`
    letter-spacing: -1.056px;
    position: absolute;
    left: 441px;
-   top: 1150px;
+   top: 1100px;
  `;
 
 export const BodyPage = styled.div``;
 
-export const Swiper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  cursor: pointer;
-`;
+// export const Swiper = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-end;
+//   cursor: pointer;
+// `;
 
-export const SwiperSlide = styled.div`
-  /* width: 60px;
-  height: 60px;
-  margin: 3px;
-  cursor: pointer; */
-`;
+// export const SwiperSlide = styled.div`
+//   /* width: 60px;
+//   height: 60px;
+//   margin: 3px;
+//   cursor: pointer; */
+// `;
 
 export const SlideContainer = styled.div`
   display: flex;
