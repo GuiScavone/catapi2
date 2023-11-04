@@ -1,4 +1,4 @@
-CatHaven Adopt Don't Shop
+# CatHaven Adopt Don't Shop
 
 This project was created to enable people to see our little cats and get in love with them. 
 
@@ -8,7 +8,7 @@ Available Scripts
 
 In the project directory, you can run:
 
-`npm start`
+###`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
